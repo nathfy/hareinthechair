@@ -1286,7 +1286,7 @@
             top: 90%;
             width: 100%;
         }
-
+        /* banner position for home page */
         .sidebar-wrap.home-title-strip:not(.istagpage).fixed .sidebar {
             top: 30%;
             transition: all 2s ease-in-out;
@@ -1634,6 +1634,9 @@
             top: -1000px;
             left: -100px;
         }
+        body > iframe.tmblr-iframe.tmblr-iframe--follow-teaser.open.center{
+            height: 0px;
+        }
     </style>
 
     {block:IfGoogleAnalyticsCode}
@@ -1865,7 +1868,7 @@
 
                 {block:IfStickyPosts}<div class="sticky-loader"></div>{/block:IfStickyPosts}
 
-                {block:Posts inlineMediaWidth="500" inlineNestedMediaWidth="500"}
+                {block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
 
                 <article id="{PostID}"
                     class="type_{PostType} {TagsAsClasses} {block:IndexPage}homehidden{/block:IndexPage} scrollable {block:SearchPage}issearchpage{/block:SearchPage} {block:TagPage}istagpage{/block:TagPage}"
