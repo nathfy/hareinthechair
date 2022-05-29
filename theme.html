@@ -469,7 +469,6 @@
         .page-wrap {
             float: none;
             position: absolute;
-            top: 33.33%;
             left: 50%;
             max-width: 900px;
             margin-left: -450px;
@@ -483,7 +482,6 @@
         .scroll-top-wrap {
             display: block;
             position: fixed;
-            top: 33.33%;
             right: 0;
             width: 40px;
             height: 40px;
@@ -534,13 +532,11 @@
 
         .sidebar-wrap .sidebar {
             position: absolute;
-            top: 0;
             width: 260px;
         }
 
         .sidebar-wrap.fixed .sidebar {
             position: fixed;
-            top: 33.33%;
         }
 
         .sidebar-wrap .title {
@@ -1283,17 +1279,16 @@
 
         .sidebar-wrap.fixed .sidebar {
             position: fixed;
-            top: 90%;
             width: 100%;
+            bottom:0px;
         }
         /* banner position for home page */
         .sidebar-wrap.home-title-strip:not(.istagpage).fixed .sidebar {
-            top: 30%;
+            bottom:0px;
             transition: all 2s ease-in-out;
         }
 
         .sidebar-wrap.home-title-strip:not(.istagpage).fixed .sidebar.loaded {
-            top: 0%;
             transition: all 2s ease-in-out;
         }
 
@@ -1631,11 +1626,11 @@
         }
 
         body > div.follow-teaser{
-            top: -1000px;
-            left: -100px;
+            top: -1000px !important;
+            left: -100px !important;
         }
         body > iframe.tmblr-iframe.tmblr-iframe--follow-teaser.open.center{
-            height: 0px;
+            height: 0px !important;
         }
     </style>
 
