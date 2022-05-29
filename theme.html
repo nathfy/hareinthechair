@@ -1333,10 +1333,9 @@
             top: 0px;
             z-index: 10;
             line-height: 22px;
-            background-color: #000000;
+            background-color: #ffffff;
             -moz-box-shadow: 0px 2px 8px #000;
-            -webkit-box-shadow: 0px 2px 8px #403621;
-            box-shadow: 0px 0px 12px #615537;
+            box-shadow: 0px 0px 12px #e1ecf2;
         }
 
         .menu-circle {
@@ -1344,19 +1343,18 @@
             margin: -10px 0px 0px 0px;
             width: 26px;
             height: 26px;
-            border: 1px dotted #524528;
-            /* background-color: #403621; */
             border-radius: 100%;
             overflow: hidden;
             display: inline-block;
             position: fixed;
             top: 24px;
-            /* left: 50%; */
             z-index: -1;
+            box-shadow: -1px -1px #8888880d;
+            ;
         }
 
         li:hover .menu-circle {
-            border: 1px dashed #CCCCCC;
+            box-shadow: 0px -1px #5b5e795c;
         }
 
         .main-menu {
@@ -1366,23 +1364,36 @@
             display: table;
         }
 
-        .main-menu li {
-            border-right: 5px dotted #e0a2a2;
-            padding: 0px 5px 0px 5px;
-            float: left;
+        .main-menu {
+            position: relative;
+            width: 100%;
+            margin-top: 15px;
+            list-style: none;
         }
 
-        .main-menu li:last-child {
-            border-right: 0px dashed #CCCCCC;
+        .main-menu li {
+            border-right: 1px dotted #291f1f1c;
+            padding: 0px 5px 0px 5px;
+            float: left;
+            margin-bottom: 10px;
         }
 
         .main-menu li a {
-            color: #aabbbb;
+            display: inline-block;
+            font-size: 13px;
+            line-height: 1;
+            font-weight: bolder;
+            color: #30363c;
+            padding-bottom: 1px;
+            border-bottom: 2px solid transparent;
+        }
 
+        .main-menu li a.menu-credit {
+            font-size: 11px;
         }
 
         .main-menu li a:hover {
-            color: #aabbbb;
+            border-color: #30363c;
         }
 
         .menu .search input {
