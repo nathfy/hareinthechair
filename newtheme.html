@@ -1876,6 +1876,10 @@
         body>iframe.tmblr-iframe.tmblr-iframe--follow-teaser.open.center {
             height: 0px !important;
         }
+
+        .infiniteScrollToHide {
+            visibility: hidden;
+        }
     </style>
 
     {block:IfGoogleAnalyticsCode}
@@ -1893,7 +1897,6 @@
 
     </script>
     {/block:IfGoogleAnalyticsCode}
-
 
     <!-- Sharing meta tags -->
     <meta property="og:site_name" content="{Title}" />{block:IndexPage}
@@ -1974,7 +1977,7 @@
     <meta name="twitter:description" content="{PlaintextAnswer}" />
     <meta name="twitter:image" content="{PortraitURL-128}" />{/block:Answer}{/block:Posts}{/block:PermalinkPage}
 
-
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
 
@@ -2537,32 +2540,35 @@
 
 
             {block:IndexPage}
-            <article class="scrollable type_pagination {select:Pagination} {block:NextPage}next{/block:NextPage}">
+            <div
+                data-infinite-scroll='{ "path": ".pagination__next", "append": ".the-posts", "history": false, "hideNav": ".infiniteScrollToHide" }'>
+                <article
+                    class="infiniteScrollToHide scrollable type_pagination {select:Pagination} {block:NextPage}next{/block:NextPage}">
+                    <div class="article-content">
 
-                <div class="article-content">
+                        {block:Pagination}
+                        <div class="pagination">
+                            {block:PreviousPage}<a href="{PreviousPage}" class="prev"><i class="social-left"></i>
+                                {lang:Previous page}</a>{/block:PreviousPage}
+                            {block:NextPage}<a href="{NextPage}" class="next pagination__next">{lang:Next page} <i
+                                    class="social-right"></i></a>{/block:NextPage}
+                        </div>
+                        {/block:Pagination}
 
-                    {block:Pagination}
-                    <div class="pagination">
-                        {block:PreviousPage}<a href="{PreviousPage}" class="prev"><i class="social-left"></i>
-                            {lang:Previous page}</a>{/block:PreviousPage}
-                        {block:NextPage}<a href="{NextPage}" class="next">{lang:Next page} <i
-                                class="social-right"></i></a>{/block:NextPage}
+                        {block:NextPage}
+                        <div class="load-more">
+                            {block:IfLoadMoreLoading}<span class="load-more-loading">{text:Load More
+                                Loading}</span>{block:IfLoadMoreLoading}
+                            {block:IfLoadMoreEnd}<span class="load-more-end">{text:Load More
+                                End}</span>{block:IfLoadMoreEnd}
+                            {block:IfLoadMore}<span class="load-more-text">{text:Load More}</span>{block:IfLoadMore}
+                        </div>
+                        {/block:NextPage}
+
                     </div>
-                    {/block:Pagination}
 
-                    {block:NextPage}
-                    <div class="load-more">
-                        {block:IfLoadMoreLoading}<span class="load-more-loading">{text:Load More
-                            Loading}</span>{block:IfLoadMoreLoading}
-                        {block:IfLoadMoreEnd}<span class="load-more-end">{text:Load More
-                            End}</span>{block:IfLoadMoreEnd}
-                        {block:IfLoadMore}<span class="load-more-text">{text:Load More}</span>{block:IfLoadMore}
-                    </div>
-                    {/block:NextPage}
-
-                </div>
-
-            </article>
+                </article>
+            </div>
             {/block:IndexPage}
 
 
