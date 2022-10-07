@@ -2590,28 +2590,10 @@
     <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
     <script type="text/javascript">
-
-        var images = ['{HeaderImage}'
-		{ block: IfHeader2Image }, '{image:Header 2}'{/ block: IfHeader2Image}
-        { block: IfHeader3Image }, '{image:Header 3}'{
-            /block:IfHeader3Image}
-            { block: IfHeader4Image }, '{image:Header 4}'{
-                /block:IfHeader4Image}
-                { block: IfHeader5Image }, '{image:Header 5}'{
-                    /block:IfHeader5Image}
-	];
-
-                    var chosenImage = images[Math.floor(Math.random() * images.length)];
-
-                    $('.header-image').css({
-                        'background-image': 'url(' + chosenImage + ')'
-                    });
-
-                    $('.header-image > img').attr("src", chosenImage);
-                    { block: IndexPage }
-                    $(".the-posts").load("tagged/home .the-posts article");
-                    {
-                        /block:IndexPage}
+        { block: IndexPage }
+        $(".the-posts").load("tagged/home .the-posts article");
+        {
+        {/block:IndexPage}
     </script>
     <!-- mailchimp form code -->
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>

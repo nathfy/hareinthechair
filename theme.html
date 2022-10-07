@@ -1643,23 +1643,21 @@
         body > iframe.tmblr-iframe.tmblr-iframe--follow-teaser.open.center{
             height: 0px !important;
         }
+
+        .infiniteScrollToHide {
+            visibility: hidden;
+        }
     </style>
 
-    {block:IfGoogleAnalyticsCode}
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76524354-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', '{text:Google Analytics Code}']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
+        gtag('config', 'UA-76524354-1');
     </script>
-    {/block:IfGoogleAnalyticsCode}
 
 
     <!-- Sharing meta tags -->
@@ -1741,7 +1739,7 @@
     <meta name="twitter:description" content="{PlaintextAnswer}" />
     <meta name="twitter:image" content="{PortraitURL-128}" />{/block:Answer}{/block:Posts}{/block:PermalinkPage}
 
-
+    <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 
 
@@ -2351,29 +2349,13 @@
     <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
     <script type="text/javascript">
-
-        var images = ['{HeaderImage}'
-		{ block: IfHeader2Image }, '{image:Header 2}'{/ block: IfHeader2Image}
-        { block: IfHeader3Image }, '{image:Header 3}'{
-            /block:IfHeader3Image}
-            { block: IfHeader4Image }, '{image:Header 4}'{
-                /block:IfHeader4Image}
-                { block: IfHeader5Image }, '{image:Header 5}'{
-                    /block:IfHeader5Image}
-	];
-
-                    var chosenImage = images[Math.floor(Math.random() * images.length)];
-
-                    $('.header-image').css({
-                        'background-image': 'url(' + chosenImage + ')'
-                    });
-
-                    $('.header-image > img').attr("src", chosenImage);
-                    { block: IndexPage }
-                    $(".the-posts").load("tagged/home .the-posts article");
-                    { /block:IndexPage}
+        {block:IndexPage}
+        $(".the-posts").load("tagged/home .the-posts article");
+        {/block:IndexPage}
     </script>
-
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script
+        type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 </body>
 
 </html>
