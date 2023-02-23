@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
+    <meta name="p:domain_verify" content="a916c22e2ee107e143855523bcfe2f0a" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
@@ -405,7 +407,7 @@
 
         html,
         body {
-            height: 100%;
+            min-height: 100%;
         }
 
         html {
@@ -771,7 +773,6 @@
             clear: both;
             width: 100%;
             min-height: 400px;
-            margin: 70px auto;
         }
 
         article {
@@ -835,7 +836,7 @@
         }
 
         .the-posts.istagpage article img,
-        .the-posts.posts-holder article img{
+        .the-posts.posts-holder article img {
             max-width: 400px;
         }
 
@@ -845,9 +846,7 @@
             float: left;
         }
 
-        .the-posts.istagpage article figure img {
-            
-        }
+        .the-posts.istagpage article figure img {}
 
         article.type_photo .photo-stage {
             overflow: visible;
@@ -1188,8 +1187,15 @@
 
         body {
             background: #FFFFFF;
-            color: {color: Text};
-            font-family: 'Kaisei Opti', serif;
+
+            color: {
+                color: Text
+            }
+
+            ;
+            font-family: 'Kaisei Opti',
+            serif;
+            min-height: 100%;
         }
 
         h1,
@@ -1202,11 +1208,15 @@
         h3 a,
         h4 a,
         h5 a {
-            color: {color: Post Titles};
+            color: {
+                color: Post Titles
+            }
+
+            ;
         }
 
-        h2{
-            margin-bottom:1em;
+        h2 {
+            margin-bottom: 1em;
         }
 
         h1 a:hover,
@@ -1214,15 +1224,27 @@
         h3 a:hover,
         h4 a:hover,
         h5 a:hover {
-            color: {color: Link};
+            color: {
+                color: Link
+            }
+
+            ;
         }
 
         a {
-            color: {color: Link};
+            color: {
+                color: Link
+            }
+
+            ;
         }
 
         a:hover {
-            color: {color: Link Hover};
+            color: {
+                color: Link Hover
+            }
+
+            ;
         }
 
         .page-wrap {
@@ -1235,13 +1257,31 @@
         }
 
         .header-image-wrap {
-            background-color: {TitleColor};
+            background-color: {
+                TitleColor
+            }
+
+            ;
         }
 
         .sidebar-wrap .blog-title h1 {
-            font-family: {TitleFont};
-            font-weight: {TitleFontWeight};
-            color: {TitleColor};
+            font-family: {
+                TitleFont
+            }
+
+            ;
+
+            font-weight: {
+                TitleFontWeight
+            }
+
+            ;
+
+            color: {
+                TitleColor
+            }
+
+            ;
         }
 
         .sidebar-wrap .sidebar {
@@ -1285,11 +1325,12 @@
         .sidebar-wrap.fixed .sidebar {
             position: fixed;
             width: 100%;
-            bottom:0px;
+            bottom: 0px;
         }
+
         /* banner position for home page */
         .sidebar-wrap.home-title-strip:not(.istagpage).fixed .sidebar {
-            bottom:0px;
+            bottom: 0px;
             transition: all 2s ease-in-out;
         }
 
@@ -1317,19 +1358,41 @@
         }
 
         .social-menu li a {
-            background: {color: Social Background};
-            color: {olor: Social Icon};
+            background: {
+                color: Social Background
+            }
+
+            ;
+
+            color: {
+                olor: Social Icon
+            }
+
+            ;
         }
 
         .scroll-top,
         .post-nav {
-            background: {color: Social Background};
-            color: {color: Social Icon};
+            background: {
+                color: Social Background
+            }
+
+            ;
+
+            color: {
+                color: Social Icon
+            }
+
+            ;
         }
 
         .scroll-top:hover,
         .post-nav:hover {
-            color: {color: Social Icon};
+            color: {
+                color: Social Icon
+            }
+
+            ;
         }
 
         nav.menu {
@@ -1380,6 +1443,7 @@
             width: 100%;
             margin-top: 15px;
             list-style: none;
+            padding: 0px 20px 0px 20px;
         }
 
         .main-menu li {
@@ -1408,23 +1472,43 @@
         }
 
         .menu .search input {
-            color: {color: Menu Text};
+            color: {
+                color: Menu Text
+            }
+
+            ;
         }
 
         .menu .search ::-webkit-input-placeholder {
-            color: {color: Menu Text};
+            color: {
+                color: Menu Text
+            }
+
+            ;
         }
 
         .menu .search :-moz-placeholder {
-            color: {color: Menu Text};
+            color: {
+                color: Menu Text
+            }
+
+            ;
         }
 
         .menu .search ::-moz-placeholder {
-            color: {color: Menu Text};
+            color: {
+                color: Menu Text
+            }
+
+            ;
         }
 
         .menu .search :-ms-input-placeholder {
-            color: {color: Menu Text};
+            color: {
+                color: Menu Text
+            }
+
+            ;
         }
 
         .table {
@@ -1434,40 +1518,87 @@
 
         .footer span,
         .footer .credit a {
-            color: {color: Menu Text};
+            color: {
+                color: Menu Text
+            }
+
+            ;
         }
 
         .type_pagination.pagination_load-more .article-content,
         .type_pagination.pagination_infinite-scroll .article-content {
-            color: {color: Link};
+            color: {
+                color: Link
+            }
+
+            ;
         }
 
         .type_pagination.pagination_load-more .article-content:hover,
         .type_pagination.pagination_load-more.loading .article-content {
-            background: {color: Link};
-            color: {color: Post Background};
+            background: {
+                color: Link
+            }
+
+            ;
+
+            color: {
+                color: Post Background
+            }
+
+            ;
         }
 
         .type_pagination.pagination a {
-            background: {color: Post Background};
+            background: {
+                color: Post Background
+            }
+
+            ;
         }
 
         .instagram-feed .instagram-overlay {
-            background: rgba( {RGBcolor:Link} , 0.8);
+            background: rgba({
+                RGBcolor:Link
+            }
+
+            , 0.8);
         }
 
         .instagram-feed .instagram-overlay .social-instagram {
-            color: {color: Post Background};
+            color: {
+                color: Post Background
+            }
+
+            ;
         }
 
         .instagram-feed .instagram-link {
-            margin-top: {text: Photoset Spacing}px;
-            background: {color: Link};
-            color: {color: Post Background};
+            margin-top: {
+                text: Photoset Spacing
+            }
+
+            px;
+
+            background: {
+                color: Link
+            }
+
+            ;
+
+            color: {
+                color: Post Background
+            }
+
+            ;
         }
 
         .instagram-feed .instagram-link:hover {
-            background: {color: Link Hover};
+            background: {
+                color: Link Hover
+            }
+
+            ;
         }
 
         .sidebar-wrap .sidebar {
@@ -1488,26 +1619,47 @@
 
         article.type_chat .line,
         article blockquote {
-            border-color: {color: Borders};
+            border-color: {
+                color: Borders
+            }
+
+            ;
         }
 
         article.type_audio .audio-post-wrap p,
         article.type_answer .answer-person,
         article.type_answer .answer-text.question {
-            color: {color: Post Titles};
+            color: {
+                color: Post Titles
+            }
+
+            ;
         }
 
         article.type_quote .quote {
-            color: {color: Post Titles};
+            color: {
+                color: Post Titles
+            }
+
+            ;
         }
 
         article hr {
-            background: {color: Borders};
+            background: {
+                color: Borders
+            }
+
+            ;
         }
 
         article.type_link .the-link {
             background: none;
-            color: {color: Post Background};
+
+            color: {
+                color: Post Background
+            }
+
+            ;
         }
 
         article.type_link .the-link:hover {
@@ -1528,20 +1680,41 @@
         }
 
         .icons li.sharer ul {
-            background: {color: Post Background};
-            border-color: {color: Borders};
+            background: {
+                color: Post Background
+            }
+
+            ;
+
+            border-color: {
+                color: Borders
+            }
+
+            ;
         }
 
         .icons li.sharer ul:before {
-            border-top-color: {color: Borders};
+            border-top-color: {
+                color: Borders
+            }
+
+            ;
         }
 
         .icons li.sharer ul:after {
-            border-top-color: {color: Post Background};
+            border-top-color: {
+                color: Post Background
+            }
+
+            ;
         }
 
         .post-footer a.timestamp {
-            color: {color: Text};
+            color: {
+                color: Text
+            }
+
+            ;
         }
 
         .blog-title h1 {
@@ -1553,70 +1726,131 @@
         }
 
         ::-moz-selection {
-            background: {color: Link};
-            color: {color: Post Background};
+            background: {
+                color: Link
+            }
+
+            ;
+
+            color: {
+                color: Post Background
+            }
+
+            ;
             text-shadow: none;
         }
 
         ::selection {
-            background: {color: Link};
-            color: {color: Post Background};
+            background: {
+                color: Link
+            }
+
+            ;
+
+            color: {
+                color: Post Background
+            }
+
+            ;
             text-shadow: none;
         }
 
-        {block: IfFontEmbedCode}
-            {block: IfFontFamilyLogo}
-                .sidebar-wrap .blog-title h1 {
-                    font-family: '{text:Font Family Logo}';
-                }
-            {/block: IfFontFamilyLogo}
-
-            {block: IfFontFamilyTitles}
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                article.type_quote .quote,
-                article.type_answer .answer-person,
-                article.type_link .the-link {
-                    font-family: '{text:Font Family Titles}';
-                }
-
-            {/block: IfFontFamilyTitles}
-        {/block: IfFontEmbedCode}
-
-        {block: IfStickyPosts}
-
-            .index article. {text: Sticky Tag}
             {
-                display: none;
-            }
+            block: IfFontEmbedCode
+        }
 
-            .index article. {text: Sticky Tag}
-            .sticky-show,
-            .index.tagged article. {text: Sticky Tag},
-            .index.search article. {text: Sticky Tag}
             {
-                display: block;
-            }
+            block: IfFontFamilyLogo
+        }
 
-        {/block: IfStickyPosts}
+        .sidebar-wrap .blog-title h1 {
+            font-family: '{text:Font Family Logo}';
+        }
 
-        {block: IndexPage}
-            .homehidden:not(.istagpage) {
-                display: none;
-            }
-            .homehidden.home {
-                display: initial;
-            }
-            .post img {
-                max-width: 550px;
-            }
-            .post-footer {
-                display: none;
-            }
-        {/block: IndexPage}
+            {
+            /block: IfFontFamilyLogo
+        }
+
+            {
+            block: IfFontFamilyTitles
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        article.type_quote .quote,
+        article.type_answer .answer-person,
+        article.type_link .the-link {
+            font-family: '{text:Font Family Titles}';
+        }
+
+            {
+            /block: IfFontFamilyTitles
+        }
+
+            {
+            /block: IfFontEmbedCode
+        }
+
+            {
+            block: IfStickyPosts
+        }
+
+        .index article. {
+            text: Sticky Tag
+        }
+
+            {
+            display: none;
+        }
+
+        .index article. {
+            text: Sticky Tag
+        }
+
+        .sticky-show,
+        .index.tagged article. {
+            text: Sticky Tag
+        }
+
+        ,
+        .index.search article. {
+            text: Sticky Tag
+        }
+
+            {
+            display: block;
+        }
+
+            {
+            /block: IfStickyPosts
+        }
+
+            {
+            block: IndexPage
+        }
+
+        .homehidden:not(.istagpage) {
+            display: none;
+        }
+
+        .homehidden.home {
+            display: initial;
+        }
+
+        .post img {
+            max-width: 550px;
+        }
+
+        .post-footer {
+            display: none;
+        }
+
+            {
+            /block: IndexPage
+        }
 
         .tag_uppercase:first-letter {
             text-transform: uppercase;
@@ -1636,19 +1870,21 @@
             padding-top: 0px !important;
         }
 
-        body > div.follow-teaser{
+        body>div.follow-teaser {
             top: -1000px !important;
             left: -100px !important;
         }
-        body > iframe.tmblr-iframe.tmblr-iframe--follow-teaser.open.center{
+
+        body>iframe.tmblr-iframe.tmblr-iframe--follow-teaser.open.center {
             height: 0px !important;
         }
 
         .infiniteScrollToHide {
             visibility: hidden;
+            height: 0px;
         }
 
-        .tmblr-lightbox .lightbox-image-container.single-image{
+        .tmblr-lightbox .lightbox-image-container.single-image {
             background-color: white;
         }
     </style>
@@ -1750,6 +1986,12 @@
 <body {block:IndexPage}
     class="index{block:IfStickyPosts} sticky-posts{/block:IfStickyPosts}{block:SearchPage} search{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:TagPage} tagged{/block:TagPage}"
     {/block:IndexPage} {block:PermalinkPage} class="permalink" {/block:PermalinkPage}>
+    <style type="text/css">
+        body .tmblr-iframe--follow-teaser,
+        body .tmblr-iframe--gdpr-banner {
+            display: none !important;
+        }
+    </style>
 
 
     {block:ShowHeaderImage}
@@ -1759,7 +2001,7 @@
         </div>
     </header>
     {/block:ShowHeaderImage}
-    <nav class="menu">
+    <nav class="menu" id="mainMenu">
         <div class="table">
             <ul class="social-menu {AvatarShape}">
                 {block:IfURLTwitter}
@@ -1838,7 +2080,7 @@
         </aside>
 
 
-        <section class="the-posts {block:TagPage}istagpage{/block:TagPage}">
+        <section id="mainContent" class="the-posts{block:TagPage} istagpage{/block:TagPage}">
 
 
             {block:IndexPage}
@@ -2303,65 +2545,81 @@
                 {/block:Posts}
 
             </div>
-
-
-            {block:IndexPage}
-            <div 
-                data-infinite-scroll='{ "path": ".pagination__next", "append": ".the-posts", "history": false, "hideNav": ".infiniteScrollToHide" }'
-            >
-                <article 
-                    class="infiniteScrollToHide scrollable type_pagination {select:Pagination} {block:NextPage}next{/block:NextPage}"
-                >
-
-                    <div class="article-content">
-
-                        {block:Pagination}
-                        <div class="pagination">
-                            {block:PreviousPage}<a href="{PreviousPage}" class="prev"><i class="social-left"></i>{lang:Previous page}</a>{/block:PreviousPage}
-                            {block:NextPage}<a href="{NextPage}" class="next pagination__next">{lang:Next page} <i class="social-right"></i></a>{/block:NextPage}
-                        </div>
-                        {/block:Pagination}
-
-                        {block:NextPage}
-                        <div class="load-more">
-                            {block:IfLoadMoreLoading}<span class="load-more-loading">{text:Load More Loading}</span>{block:IfLoadMoreLoading}
-                            {block:IfLoadMoreEnd}<span class="load-more-end">{text:Load More End}</span>{block:IfLoadMoreEnd}
-                            {block:IfLoadMore}<span class="load-more-text">{text:Load More}</span>{block:IfLoadMore}
-                        </div>
-                        {/block:NextPage}
-
-                    </div>
-
-                </article>
-            </div>
-            {/block:IndexPage}
-
-
-            <footer class="footer">
-                <span>&copy; {Title} {CopyrightYears}</span>
-            </footer>
-
-
         </section>
 
+        {block:IndexPage}
+        <div
+            data-infinite-scroll='{ "path": ".pagination__next", "append": ".posts-holder", "history": false, "debug": true, "prefill": true }'>
+            <article
+                class="infiniteScrollToHide scrollable type_pagination {select:Pagination} {block:NextPage}next{/block:NextPage}">
+
+                <div class="article-content">
+
+                    {block:Pagination}
+                    <div class="pagination">
+                        {block:PreviousPage}<a href="{PreviousPage}" class="prev"><i
+                                class="social-left"></i>{lang:Previous page}</a>{/block:PreviousPage}
+                        {block:NextPage}<a href="{NextPage}" class="next pagination__next">{lang:Next page} <i
+                                class="social-right"></i></a>{/block:NextPage}
+                    </div>
+                    {/block:Pagination}
+
+                    {block:NextPage}
+                    <div class="load-more">
+                        {block:IfLoadMoreLoading}<span class="load-more-loading">{text:Load More
+                            Loading}</span>{block:IfLoadMoreLoading}
+                        {block:IfLoadMoreEnd}<span class="load-more-end">{text:Load More
+                            End}</span>{block:IfLoadMoreEnd}
+                        {block:IfLoadMore}<span class="load-more-text">{text:Load More}</span>{block:IfLoadMore}
+                    </div>
+                    {/block:NextPage}
+
+                </div>
+
+            </article>
+        </div>
+        {/block:IndexPage}
+
+
+        <footer class="footer">
+            <span>&copy; {Title} {CopyrightYears}</span>
+        </footer>
     </div>
 
-
-
-
     <!-- Javascript Assets -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
-    <script type="text/javascript">
-        {block:IndexPage}
-        $(".the-posts").load("tagged/home .the-posts article");
-        {/block:IndexPage}
-    </script>
+
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script
         type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+    <script>
+        function noHrefLi() {
+            var linkSet = document.querySelectorAll('a[href*="href.li/?"]');
+            Array.prototype.forEach.call(linkSet, function (el, i) {
+                var theLink = linkSet[i].getAttribute('href').split("href.li/?")[1];
+                linkSet[i].setAttribute("href", theLink);
+            });
+        }
+        noHrefLi();
+        function noTumblr() {
+            var linkSet = document.querySelectorAll('a[href*="t.umblr.com/redirect"]');
+            Array.prototype.forEach.call(linkSet, function (el, i) {
+                var currentLink = linkSet[i];
+                var originalURL = currentLink.getAttribute("href").split("?z=")[1].split("&t=")[0];
+                var replaceURL = decodeURIComponent(originalURL);
+                currentLink.setAttribute("href", replaceURL);
+            });
+        }
+        noTumblr();
+        $(window).resize(function () {
+            var height = $('#mainMenu').height();
+            $('#mainContent').css({
+                'margin-top': height
+            });
+        }).trigger('resize');
+    </script>
 </body>
 
 </html>
