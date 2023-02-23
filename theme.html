@@ -1647,6 +1647,10 @@
         .infiniteScrollToHide {
             visibility: hidden;
         }
+
+        .tmblr-lightbox .lightbox-image-container.single-image{
+            background-color: white;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -2302,32 +2306,34 @@
 
 
             {block:IndexPage}
-            <article class="scrollable type_pagination {select:Pagination} {block:NextPage}next{/block:NextPage}">
+            <div 
+                data-infinite-scroll='{ "path": ".pagination__next", "append": ".the-posts", "history": false, "hideNav": ".infiniteScrollToHide" }'
+            >
+                <article 
+                    class="infiniteScrollToHide scrollable type_pagination {select:Pagination} {block:NextPage}next{/block:NextPage}"
+                >
 
-                <div class="article-content">
+                    <div class="article-content">
 
-                    {block:Pagination}
-                    <div class="pagination">
-                        {block:PreviousPage}<a href="{PreviousPage}" class="prev"><i class="social-left"></i>
-                            {lang:Previous page}</a>{/block:PreviousPage}
-                        {block:NextPage}<a href="{NextPage}" class="next">{lang:Next page} <i
-                                class="social-right"></i></a>{/block:NextPage}
+                        {block:Pagination}
+                        <div class="pagination">
+                            {block:PreviousPage}<a href="{PreviousPage}" class="prev"><i class="social-left"></i>{lang:Previous page}</a>{/block:PreviousPage}
+                            {block:NextPage}<a href="{NextPage}" class="next pagination__next">{lang:Next page} <i class="social-right"></i></a>{/block:NextPage}
+                        </div>
+                        {/block:Pagination}
+
+                        {block:NextPage}
+                        <div class="load-more">
+                            {block:IfLoadMoreLoading}<span class="load-more-loading">{text:Load More Loading}</span>{block:IfLoadMoreLoading}
+                            {block:IfLoadMoreEnd}<span class="load-more-end">{text:Load More End}</span>{block:IfLoadMoreEnd}
+                            {block:IfLoadMore}<span class="load-more-text">{text:Load More}</span>{block:IfLoadMore}
+                        </div>
+                        {/block:NextPage}
+
                     </div>
-                    {/block:Pagination}
 
-                    {block:NextPage}
-                    <div class="load-more">
-                        {block:IfLoadMoreLoading}<span class="load-more-loading">{text:Load More
-                            Loading}</span>{block:IfLoadMoreLoading}
-                        {block:IfLoadMoreEnd}<span class="load-more-end">{text:Load More
-                            End}</span>{block:IfLoadMoreEnd}
-                        {block:IfLoadMore}<span class="load-more-text">{text:Load More}</span>{block:IfLoadMore}
-                    </div>
-                    {/block:NextPage}
-
-                </div>
-
-            </article>
+                </article>
+            </div>
             {/block:IndexPage}
 
 
